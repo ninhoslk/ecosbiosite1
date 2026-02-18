@@ -61,7 +61,7 @@ const Footer = () => {
               </li>
             </ul>
               <div className="flex gap-3 mt-4">
-                <a href="https://www.instagram.com/ecosbio_." target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Instagram">
+                <a href="https://www.instagram.com/ecosbio_" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Instagram">
                   <Instagram className="h-5 w-5" />
                 </a>
               </div>
