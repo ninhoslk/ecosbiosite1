@@ -40,7 +40,7 @@ const App = () => (
           <Route path="/contato" element={<Contato />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+        </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
