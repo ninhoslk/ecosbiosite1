@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(() => ({
-  base: "/ecosbiosite1/",
+  base: "/", // DOMÍNIO PRÓPRIO
   server: {
     host: "::",
     port: 8080,
