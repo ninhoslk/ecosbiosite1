@@ -10,7 +10,7 @@ const serviceEnvironmentUrl =
 const serviceSocialUrl =
   "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&q=80"; // comunidade / pessoas
 const serviceEducationUrl =
-  "https://images.unsplash.com/photo-1544717305-2782549b5136?w=900&q=80"; // crianças / educação ambiental
+  "http://meloliani.com.br/wp-content/uploads/2026/02/social.jpg"; // crianças / educação ambiental
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 32 },
