@@ -6,11 +6,11 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 // Imagens reais alinhadas ao portfólio da EcosBio
 const serviceEnvironmentUrl =
-  "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=900&q=80"; // mata / natureza
+  "https://meloliani.com.br/wp-content/uploads/2026/02/IMG_3054-scaled.jpg"; // mata / natureza
 const serviceSocialUrl =
-  "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&q=80"; // comunidade / pessoas
+  "https://meloliani.com.br/wp-content/uploads/2026/02/social.jpg"; // comunidade / pessoas
 const serviceEducationUrl =
-  "http://meloliani.com.br/wp-content/uploads/2026/02/social.jpg"; // crianças / educação ambiental
+  "https://meloliani.com.br/wp-content/uploads/2026/02/ambiental.png"; // crianças / educação ambiental
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 32 },
