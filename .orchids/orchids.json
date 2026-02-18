@@ -3,7 +3,7 @@
   "createdAt": 1771357757102,
   "version": "1.0",
   "startupCommands": [
-    "npm install; npm run dev"
+    "bun install; bun run dev"
   ],
   "templateId": "any",
   "detectedFramework": "vite"
