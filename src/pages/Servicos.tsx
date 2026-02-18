@@ -6,11 +6,11 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 // Imagens reais alinhadas ao portfólio da EcosBio
 const serviceEnvironmentUrl =
-  "https://meloliani.com.br/wp-content/uploads/2026/02/IMG_3054-scaled.jpg"; // mata / natureza
+  "https://meloliani.com.br/wp-content/uploads/2026/02/ambiental.png"; // mata / natureza
 const serviceSocialUrl =
   "https://meloliani.com.br/wp-content/uploads/2026/02/social.jpg"; // comunidade / pessoas
 const serviceEducationUrl =
-  "https://meloliani.com.br/wp-content/uploads/2026/02/ambiental.png"; // crianças / educação ambiental
+  "https://meloliani.com.br/wp-content/uploads/2026/02/IMG_3054-scaled.jpg"; // crianças / educação ambiental
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 32 },
@@ -53,14 +53,14 @@ const services = [
   },
   {
     icon: GraduationCap,
-    title: "Educação Ambiental",
+    title: "Formação Educacional",
     description:
-      "Promovemos a conscientização ambiental e social por meio de capacitações, workshops e programas educacionais voltados para crianças, jovens e adultos.",
+      "Oferecemos palestras, formações e programas de capacitação voltados para professores, diretores e equipes gestoras, com foco em metodologias educacionais, desenvolvimento profissional e fortalecimento do ambiente escolar.",
     items: [
-      "Workshops e treinamentos",
-      "Educação ambiental escolar",
-      "Capacitação profissional",
-      "Conscientização comunitária",
+      "Palestras para professores e equipes pedagógicas",
+      "Formação continuada para educadores",
+      "Capacitação para diretores e coordenadores",
+      "Desenvolvimento institucional e pedagógico",
     ],
       image: serviceEducationUrl,
     color: "text-sky",
