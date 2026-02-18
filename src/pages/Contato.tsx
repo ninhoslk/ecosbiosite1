@@ -8,6 +8,11 @@ import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID ?? "";
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? "";
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY ?? "";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -26,14 +31,40 @@ const contactInfo = [
 const Contato = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve. Obrigado!",
-    });
-    setForm({ name: "", email: "", phone: "", message: "" });
+    setSending(true);
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          phone: form.phone,
+          message: form.message,
+          to_email: "ecosbioambiental@gmail.com",
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
+      toast({
+        title: "Mensagem enviada!",
+        description: "Entraremos em contato em breve. Obrigado!",
+      });
+      setForm({ name: "", email: "", phone: "", message: "" });
+    } catch {
+      toast({
+        title: "Erro ao enviar",
+        description: "Não foi possível enviar a mensagem. Tente novamente ou entre em contato por e-mail.",
+        variant: "destructive",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -103,15 +134,16 @@ const Contato = () => {
                         required
                       />
                     </div>
-                    <Button type="submit" className="w-full font-body">
-                      <Send className="mr-2 h-4 w-4" /> Enviar Mensagem
+                    <Button type="submit" className="w-full font-body" disabled={sending}>
+                      <Send className="mr-2 h-4 w-4" />
+                      {sending ? "Enviando..." : "Enviar Mensagem"}
                     </Button>
                   </form>
                 </CardContent>
               </Card>
             </motion.div>
 
-            {/* Contact Info */}
+            {/* Contact Info + Map */}
             <motion.div variants={fadeInUp} className="space-y-8">
               <div>
                 <h2 className="font-display text-2xl font-bold text-foreground mb-6">Informações de Contato</h2>
@@ -130,13 +162,19 @@ const Contato = () => {
                 </div>
               </div>
 
-              {/* Map placeholder */}
+              {/* Google Maps - Dracena/SP */}
               <Card className="border-none shadow-md overflow-hidden">
-                <div className="h-64 bg-muted flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
-                    <p className="font-body text-sm text-muted-foreground">Mapa de localização</p>
-                  </div>
+                <div className="h-72 w-full">
+                  <iframe
+                    title="Localização - Dracena, SP"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59577.87!2d-51.5333!3d-21.4833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94982e18f83c6c15%3A0x638e0e8e7dc9bc73!2sDracena%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
               </Card>
             </motion.div>
