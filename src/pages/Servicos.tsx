@@ -6,7 +6,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 // Imagens reais alinhadas ao portfólio da EcosBio
 const serviceEnvironmentUrl =
-  "https://meloliani.com.br/wp-content/uploads/2026/02/ambiental.png"; // mata / natureza
+  "https://meloliani.com.br/wp-content/uploads/2026/02/ambiente.png"; // mata / natureza
 const serviceSocialUrl =
   "https://meloliani.com.br/wp-content/uploads/2026/02/social.jpg"; // comunidade / pessoas
 const serviceEducationUrl =
