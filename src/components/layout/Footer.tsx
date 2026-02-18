@@ -60,17 +60,11 @@ const Footer = () => {
                 Dracena, SP - Brasil
               </li>
             </ul>
-            <div className="flex gap-3 mt-4">
-              <a href="#" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Facebook">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Instagram">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
+              <div className="flex gap-3 mt-4">
+                <a href="https://www.instagram.com/ecosbio_." target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Instagram">
+                  <Instagram className="h-5 w-5" />
+                </a>
+              </div>
           </div>
         </div>
 
