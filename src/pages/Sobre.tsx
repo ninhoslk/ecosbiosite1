@@ -63,7 +63,7 @@ const timeline = [
 
 const numbers = [
   { icon: Users, value: "3 Milhões+", label: "Pessoas Impactadas Diretamente e Indiretamente" },
-  { icon: Building2, value: "100+", label: "Contratos Públicos" },
+  { icon: Building2, value: "100+", label: "Contratos" },
   { icon: MapPin, value: "50+", label: "Municípios Atendidos" },
   { icon: GraduationCap, value: "16+", label: "Anos de Atuação" },
 ];
