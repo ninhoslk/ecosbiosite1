@@ -110,7 +110,7 @@ const Sobre = () => {
                 <h2 className="font-display text-2xl font-bold text-foreground">Missão</h2>
               </div>
               <p className="font-body text-muted-foreground leading-relaxed">
-                Promover o desenvolvimento sustentável através de projetos sociais, ambientais e educacionais que transformam comunidades e capacitam profissionais, tendo o conhecimento científico como base metodológica de todas as nossas ações.
+                Promover o desenvolvimento sustentável por meio de projetos sociais, ambientais e educacionais que transformam comunidades e capacitam profissionais, tendo o conhecimento científico como base metodológica de todas as nossas ações.
               </p>
             </motion.div>
             <motion.div variants={fadeInUp}>
