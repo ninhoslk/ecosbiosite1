@@ -235,7 +235,7 @@ const projects = [
     year: "2026",
     description: "Programa de Educação Ambiental focado na comunidade escolar local.",
     result: "7.000 pessoas impactadas",
-    link: "https://drive.google.com/file/d/1511XalhC57A-_plEhRKbLsRN_WzvPtk-/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1KIznlKTGlFrpSC71Wza-V55Sk4c3TudS/view?usp=drivesdk",
   },
   {
     title: "Congresso para Profissionais da Educação Infantil – Votuporanga/SP",
