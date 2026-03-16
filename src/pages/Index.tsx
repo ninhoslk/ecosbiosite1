@@ -41,7 +41,7 @@ const pillars = [
 ];
 
 const impactNumbers = [
-  { number: 30, suffix: "+", label: "Projetos Realizados" },
+  { number: 50, suffix: "+", label: "Projetos Realizados" },
   { number: 100000, suffix: "+", label: "Pessoas Impactadas" },
   { number: 16, suffix: "+", label: "Anos de Atuação" },
 ];
