@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Routes, Route, useLocation, HashRouter } from "react-router-dom";
+import { Routes, Route, useLocation, HashRouter, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import Sobre from "./pages/Sobre";
 import Servicos from "./pages/Servicos";
@@ -11,6 +11,8 @@ import Projetos from "./pages/Projetos";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contato from "./pages/Contato";
+import Certificado from "./pages/Certificado";
+import AdminCertificados from "./pages/AdminCertificados";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +40,9 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/certificados/:codigo" element={<Certificado />} />
+          <Route path="/admin" element={<Navigate to="/admin/certificados" replace />} />
+          <Route path="/admin/certificados" element={<AdminCertificados />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </HashRouter>
